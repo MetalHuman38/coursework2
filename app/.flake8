@@ -1,0 +1,34 @@
+[flake8]
+exclude =
+    .git
+    __pycache__
+    docs/source/conf.py
+    old,
+    build,
+    dist,
+    venv,
+    .venv,
+    .tox,
+    .eggs,
+    *.egg,
+    .cache,
+    .pytest_cache,
+    migrations,
+    settings.py,
+    manage.py,
+    .vscode,
+    .github,
+    .idea,
+    .vscode,
+    .vscode-test,
+    .vscode-test,
+    .pytest_cache,
+    .mypy_cache,
+
+max-line-length = 88
+extend-ignore = E203, W503
+
+[isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = True

@@ -1,0 +1,87 @@
+docs.txt
+.python-version
+img_align_celeba/
+classification_results.csv/
+
+.vscode/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# csv files
+*.csv
+
+# Distribution / packaging
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cache
+*.so
+*.egg
+*.egg-info
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info
+.installed.cfg
+*.egg
+wheelhouse/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+MANIFEST
+
+# PyInstaller
+[.]pybuild/
+[.]pygenerated/
+__pycache__/
+*.pyc
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+
+# pyenv
+.python-version
+
+# dotenv
+.env
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy

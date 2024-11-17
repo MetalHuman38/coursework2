@@ -1,0 +1,19 @@
+<!-- This is the feedback page that will be displayed after the user submits feedback. -->
+{% extends "uidirectory/base.html" %}
+
+<!-- Set the title of the page -->
+{% block title %}Feedback{% endblock %}
+
+<!-- Page content goes here -->
+{% block content %}
+<div class="text-center py-10">
+  <h1 class="text-3xl font-bold">Feedback Submission</h1>
+  <p class="mt-4 text-lg">Thank you for your input!</p>
+  <a
+    href="{% url 'uidirectory:home' %}"
+    class="mt-6 inline-block bg-blue-500 text-white px-4 py-2 rounded"
+  >
+    Go Back to Home
+  </a>
+</div>
+{% endblock %}

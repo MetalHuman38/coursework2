@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Load static files -->
+    {% load static %}
+
+    <!-- Load Tailwind CSS -->
+    {% load tailwind_tags %}
+
+    <!-- Load Tailwind CSS -->
+    {% tailwind_css %}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}UI Directory{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <nav class="bg-gray-800 p-4">
+        <div class="container">
+          <a href="{% url 'uidirectory:home' %}" class="text-white font-bold"
+            >Home</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">{% block content %} {% endblock %}</main>
+    <footer class="text-white text-center p-4">
+      &copy; 2024 Image Classification
+    </footer>
+  </body>
+</html>

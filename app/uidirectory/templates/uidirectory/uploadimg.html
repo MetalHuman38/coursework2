@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!-- Set the title of the page -->
+{% block title %}Upload Image | UI Directory{% endblock %}
+
+<!-- Page content goes here -->
+{% block content %}
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto">
+    <div class="bg-white p-4 rounded">
+      <h1 class="text-2xl font-bold mb-4">Upload an Image</h1>
+      <form
+        action="{% url 'uidirectory:uploadimg' %}"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <div class="mb-4">
+          <label for="image" class="block font-semibold">Select Image</label>
+          <input
+            type="file"
+            id="image"
+            name="image"
+            class="form-input w-full"
+            required
+          />
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
+          Upload
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

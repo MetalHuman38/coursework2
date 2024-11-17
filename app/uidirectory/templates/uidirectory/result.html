@@ -1,0 +1,67 @@
+<!-- This is the template for the result page. It displays the classification result. -->
+{% extends "uidirectory/base.html" %}
+
+<!-- Load static files -->
+{% load static %}
+
+<!-- Load Tailwind CSS -->
+{% load static tailwind_tags %}
+
+<!-- Load Tailwind CSS -->
+{% tailwind_css %}
+
+<!-- Set the title of the page -->
+{% block title %}Classification Result{% endblock %}
+
+<!-- Page content goes here -->
+{% block content %}
+<section class="bg-gray-100 py-8">
+  <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+    <h1 class="text-3xl font-bold text-center mb-6 text-blue-600">
+      Classification Result
+    </h1>
+    <div class="text-center">
+      <p class="text-xl mb-4">
+        <strong>Label:</strong>
+        <span class="text-green-600">{{ label }}</span>
+      </p>
+      <p class="text-xl mb-4">
+        <strong>Confidence:</strong>
+        <span class="text-blue-600">{{ confidence }}%</span>
+      </p>
+    </div>
+    <div class="text-center mt-6">
+      <a
+        href="{% url 'uidirectory:classify_image' %}"
+        class="inline-block bg-blue-500 text-white py-2 px-6 rounded hover:bg-blue-600 transition"
+      >
+        Classify Another Image
+      </a>
+    </div>
+  </div>
+  <!-- Feedback Form -->
+  <div class="mt-8 text-center">
+    <p>Is this result correct?</p>
+    <form method="post" action="{% url 'uidirectory:feedback' %}">
+      {% csrf_token %}
+      <input type="hidden" name="image_id" value="uploaded_image_id" />
+      <!-- Replace with actual image ID if needed -->
+      <input type="hidden" name="predicted_label" value="{{ label }}" />
+      <button
+        type="submit"
+        class="bg-green-500 text-white px-4 py-2 rounded mx-2"
+      >
+        Yes
+      </button>
+      <button
+        type="submit"
+        name="incorrect"
+        value="true"
+        class="bg-red text-white px-4 py-2 rounded mx-2"
+      >
+        No
+      </button>
+    </form>
+  </div>
+</section>
+{% endblock %}

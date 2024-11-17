@@ -27,8 +27,3 @@ exclude =
 
 max-line-length = 88
 extend-ignore = E203, W503
-
-[isort]
-line_length = 88
-multi_line_output = 3
-include_trailing_comma = True

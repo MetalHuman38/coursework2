@@ -85,3 +85,9 @@ instance/
 
 # Scrapy stuff:
 .scrapy
+
+explore.ipynb
+model.pth
+
+load_celeb_img.py
+load_img_dataset.py
